@@ -14,7 +14,7 @@ const BarCharts = ({ data }) => {
     >
       <VictoryBar
         data={data}
-        x={(datum) => new Date(datum.Date.replace(/-/g, "/"))}
+        x={(datum) => new Date(datum.date.replace(/-/g, "/"))}
         y="open"
         barRatio={0.5}
         animate={{
