@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.header {
+  min-height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--underline);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+@media only screen and (max-width: $xx-small) {
+  .header {
+    min-height: 14rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+    &__searchbar {
+      order: 1;
+      flex: 0 0 90% !important;
+      margin: 0 auto;
+    }
+  }
+}
+
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+.user-nav {
+  display: flex;
+  align-self: stretch;
+
+  & > * {
+    padding: 0 2rem;
+    height: 100%;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    &:hover {
+      background-color: var(--grey-light-2);
+    }
+  }
+
+  &__user-name {
+    font-size: 1.6rem;
+  }
+  &__user-photo {
+    height: 4rem;
+    border-radius: 100rem;
+    margin-right: 1rem;
+  }
+}

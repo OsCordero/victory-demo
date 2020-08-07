@@ -1,0 +1,29 @@
+:root {
+  //Colors
+  --primary: #eb2f64;
+  --primary-light: #ff3366;
+  --primary-dark: #ba265d;
+  --grey-light-1: #faf9f9;
+  --grey-light-2: #f4f2f2;
+  --grey-light-3: #f0eeee;
+  --grey-light-4: #ccc;
+  --grey-dark-1: #333;
+  --grey-dark-2: #777;
+  --grey-dark-3: #999;
+
+  //Shadows
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+  --shadow-light: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.2);
+
+  //lines
+  --underline: 2px solid var(--grey-light-2);
+}
+
+//breakpoints
+$xxx-small: 336px;
+$xx-small: 500px;
+$x-small: 600px;
+$small: 736px;
+$medium: 986px;
+$large: 1100px;
+$x-large: 1500px;
