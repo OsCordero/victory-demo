@@ -1,9 +1,8 @@
 import React from "react";
 import { format } from "d3-format";
-import { timeFormat } from "d3-time-format";
 
 import { ChartCanvas, Chart } from "react-stockcharts";
-import { CandlestickSeries } from "react-stockcharts/lib/series";
+import { CandlestickSeries, BarSeries } from "react-stockcharts/lib/series";
 import { XAxis, YAxis } from "react-stockcharts/lib/axes";
 import { CrossHairCursor, MouseCoordinateY } from "react-stockcharts/lib/coordinates";
 
@@ -14,7 +13,6 @@ import { last } from "react-stockcharts/lib/utils";
 const StocksCandleChart = ({ data: initialData }) => {
   const xScaleProvider = discontinuousTimeScaleProvider.inputDateAccessor((d) => new Date(d.date));
   const { data, xScale, xAccessor, displayXAccessor } = xScaleProvider(initialData);
-  console.log(xAccessor);
 
   const start = xAccessor(last(data));
   const end = xAccessor(data[Math.max(0, data.length - 150)]);
